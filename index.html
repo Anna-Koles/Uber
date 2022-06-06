@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8"> <!-- кодировка -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- чтобы правильно отображался на телефонах: ширина сайта такая же, как ширина устройства и масштабирования изначально нет -->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- для совместимости с IE -->
 		<title>Join Uber</title>
 		<link rel="icon" href="icons/favicon.ico" type="image/x-icon">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap&subset=cyrillic-ext" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap&subset=cyrillic-ext" rel="stylesheet"/> <!-- шрифт -->
 		<link rel="stylesheet" href="css/bootstrap-reboot.min.css" />
 		<link rel="stylesheet" href="css/bootstrap-grid.min.css" />
 		<link rel="stylesheet" href="css/style.min.css" />
@@ -16,7 +16,7 @@
 		<header>
 			<nav>
 				<div class="container">
-					<ul class="menu">
+					<ul class="menu"> <!-- для SEO лучше делать список, а не просто ссылки -->
 						<li class="menu_item"><a href="#" class="menu_link">Главная</a></li>
 						<li class="menu_item"><a href="#require" class="menu_link">Со своим автомобилем</a></li>
 						<li class="menu_item"><a href="#require" class="menu_link">На автомобиле компании</a></li>
@@ -35,13 +35,14 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-6 col-md-4 offset-md-1">
-							<a href="#" class="subheader_logo"><img src="icons/logo.png" alt="logo"/></a>
+							<a href="#" class="subheader_logo"><img src="icons/logo.png" alt="logo"/></a><!-- ссылка, чтобы логотип стал кликабельным -->
 							<div class="subheader_official">Официальный партнер Uber в Москве</div>
 						</div>
 						<div class="xs-hidden col-md-3 offset-md-1 col-xl-2 offset-xl-2">
 							<div class="subheader_call">Звоните нам ежедневно</div>
 							<a href="tel:=+74957970988" class="subheader_phone">8 495 797 09 88</a>
 						</div>
+						<!-- два похожих блока, т.к. один виден на средних и больших экранах, а второй - на маленьких  -->
 						<div class="col-6 col-md-3">
 							<a href="tel:+74957970988" class="xs-visible subheader_phone">8 495 797 09 88</a>
 							<button class="subheader_btn">заказать звонок</button>
@@ -227,7 +228,7 @@
 		</div>  
 	</section>
 
-<section class="require" id="require">
+<section class="require" id="require"> <!-- id здесь нужен для локальной ссылки -->
 	<div class="container">
 		<div class="label">Возможности</div>
 		<h2 class="title">условия и требования</h2>
@@ -297,10 +298,10 @@
 <footer>
 		<div class="footer_divider"></div>
 		<div class="footer_wrapper">
-				<div>
+				<div> <!-- дополнительный div, чтобы удалось выровнять флексами (едет из-за разной ширины трех блоков в футере) -->
 						<div class="footer_social">
 								<a href="#" class="footer_social_item">
-										<i class="fab fa-facebook-f"></i>
+										<i class="fab fa-facebook-f"></i> <!-- применение иконочного шрифта с fontawesome.com -->
 								</a>
 								<a href="#" class="footer_social_item">
 										<i class="fab fa-twitter"></i>
@@ -313,7 +314,7 @@
 								</a>
 						</div>
 				</div>
-				<div>
+				<div>  <!-- дополнительный div, чтобы удалось выровнять -->
 						<div class="footer_links">
 								<div class="footer_links_main">
 										<a href="#">на главную</a>
@@ -330,7 +331,7 @@
 								<a href="#" class="footer_links_lang">Русский</a>
 						</div>
 				</div>
-				<div>
+				<div>  <!-- дополнительный div, чтобы удалось выровнять -->
 						<div class="footer_mobile">
 								<a href="#">
 										<img src="icons/app_store.png" alt="App Store">

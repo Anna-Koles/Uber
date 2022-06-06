@@ -113,18 +113,18 @@
 		margin-top: 25px
 	.menu
 		position: fixed
-		flex-direction: column
+		flex-direction: column // меню становится вертикальным, чтобы выезжало сбоку при нажатии на гамбургер
 		justify-content: center
 		align-items: center
 		top: 0
-		left: -100%
+		left: -100% // изначально скрыто слева 
 		width: 50%
-		height: 100vh
+		height: 100vh // чтобы меню подстраивалось под высоту экрана
 		padding: 20px 15px
-		background-color: rgba(0,0,0, .8)
-		transition: 0.6s all
+		background-color: rgba(0,0,0, .8) // прозрачность
+		transition: 0.6s all // выезжает плавно
 		&_active 
-			left: 0
+			left: 0 // при добавлении класса активности выезжает слева на экран 
 		&_item 
 			padding-right: 0
 			border: none
@@ -138,7 +138,7 @@
 		top: 50%
 		transform: translateY(-50%)
 		width: 26px
-		height: 12px
+		height: 12px // = 3  полоски по 2px + 3 margin по 2px, зафиксировано, чтобы не ехало
 		span 
 			display: block 
 			height: 2px
@@ -148,15 +148,16 @@
 			transition: 0.5s all
 		&_active 
 			span 
-				margin-bottom: -2px 
+				margin-bottom: -2px  // чтобы пересекались именно посередине 
 				&:nth-child(1)
-					transform: translateY(3px) rotate(-45deg)
+					transform: translateY(3px) rotate(-45deg) // поворот полоски при нажатии 
 				&:nth-child(2)
-					display: none
+					display: none // скрытие средней полоски при нажатии 
 				&:nth-child(3)
 					transform: translateY(3px) rotate(45deg)
 	.xs-hidden
 		display: none
+		// скрытие одного из двух похожих блоков - того, который предназначен для отображения на средних и больших экранах
 	.xs-visible
 		display: block
 	.subheader
@@ -217,6 +218,7 @@
 	.promo 
 		min-height: 400px
 		padding: 93px 0 35px 0
+		// без padding по бокам, потому что есть сетка bootstrap и она ограничивает контент от слишком близкого расположения к краям
 		&_descr
 			display: none
 		&_header
@@ -239,9 +241,9 @@
 	.menu 
 		width: 85%
 		&_item
-			width: 100%
+			width: 100% // растягивается на всю ширину, чтобы было удобнее нажимать пальцем, больше вероятности попасть
 			text-align: center
-			padding: 5px 0
+			padding: 5px 0 // больше расстояние между ссылками меню, чтобы не попасть пальцем случайно на соседнюю
 		&_link
 			display: block
 	.reason

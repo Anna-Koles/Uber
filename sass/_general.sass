@@ -32,14 +32,14 @@ nav
 		border-right: 2px dotted #070707
 		padding-right: 28px
 		&:last-child
-			border-right: none
+			border-right: none // убрать резделитель после последнего элемента, они должны быть только между элементами
 			
 .subheader
 	height: 84px
 	margin-top: 50px
-	position: absolute
+	position: absolute // чтобы двигать выше под полупрозрачное меню 
 	width: 100%
-	background-color: rgba(0, 0, 0, 0.6)
+	background-color: rgba(0, 0, 0, 0.6) // не opacity, а переведено в rgba, чтобы с помощью альфа-канала задать прозрачность. Иначе стали бы прозрачными еще и кнопки, текст
 
 	&_logo
 		display: block
@@ -264,7 +264,7 @@ nav
 			margin: 0 auto
 			border-radius: 100%
 			cursor: pointer
-			&:before
+			&:before // плюс создан из 2 линий с помощью псевдоэлементов (before и after)
 				content: ''
 				display: block
 				width: 14px
@@ -278,7 +278,7 @@ nav
 				height: 14px
 				position: absolute
 				left: 50%
-				transform: translateX(-50%)
+				transform: translateX(-50%) // отодвинуть влево еще и на половину ширины, чтобы встала в центре, а то left: 50% не делает строго в центре - есть еще и толщина элемента
 				background-color: $main_color
 				transition: 0.5s all
 			&:hover
@@ -305,7 +305,7 @@ nav
 	&_block
 		margin: 33px 0
 		&_nmb
-			margin-bottom: 0px
+			margin-bottom: 0px // для нижних блоков, чтобы внизу не было слишком большое расстояние; nth-child не использовано, чтобы если добавится еще один список, не стало криво
 	&_title
 		font-size: 22px
 		font-weight: 400
@@ -314,10 +314,10 @@ nav
 			color: $second_color
 	&_list
 		list-style-type: none
-		padding-left: 52px
+		padding-left: 52px // перебить стандартный padding 
 		margin-top: 22px
 		li	
-			position: relative
+			position: relative // чтобы двигать иконки независимо от списка
 			font-size: 17px
 			font-weight: 300
 			color: #222222
@@ -326,12 +326,12 @@ nav
 			&::before
 				content: ''
 				display: block
-				position: absolute
+				position: absolute // чтобы двигать иконки независимо от списка
 				left: -32px
 				top: 3px
 				width: 21px
 				height: 20px
-				background: url(../icons/mark_blue.png) center (center / cover) no-repeat
+				background: url(../icons/mark_blue.png) center (center / cover) no-repeat	// благодаря псевдоэлементу иконка загружается один раз 
 		&_red
 			li
 				&::before
@@ -380,10 +380,10 @@ footer
 		align-items: flex-start
 		padding-top: 32px
 	&_wrapper > div 
-		width: 33%
+		width: 33% // чтобы удалось выровнять флексами (едет из-за разной ширины трех блоков в футере), это ширина блоков-оберток
 		&:nth-child(3)
 			display: flex 
-			justify-content: flex-end
+			justify-content: flex-end // чтобы удалось выровнять флексами, этот блок ставал слишком близко, надо было отодвинуть
 	&_social
 		width: 160px
 		display: flex
@@ -435,4 +435,4 @@ footer
 	margin: 0
 
 .xs-visible
-	display: none
+	display: none // скрытие одного из двух похожих блоков - того, который предназначен для отображения на маленьких экранах
